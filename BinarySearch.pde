@@ -23,13 +23,22 @@ private Item[] store =
 };                             
 public int linearSearch(int catNumToFind)
 {
-  //complete this method
+  for(int i=0;i<catNumToFind;i++)//complete this method
+  if(i==catNumToFind)
+  {
+    return i;
+  }
   return -1;
 }
 public int recursiveLinearSearch(int catNumToFind, int startIndex)
 {
-  //complete this method
-  return -1;
+  
+  if(startIndex==catNumToFind)//complete this method
+    return startIndex;
+  else if(startIndex!=catNumToFind)
+    return recursiveLinearSearch(catNumToFind,startIndex+1);
+  else
+    return -1;
 }
 public int binarySearch(int catNumToFind)
 {
